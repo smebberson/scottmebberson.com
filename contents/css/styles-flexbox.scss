@@ -1,0 +1,230 @@
+@import 'reset.css';
+
+$content-margin-external: 60px;
+$content-margin-internal: 40px;
+$color-header: #6600ff;
+$color-headings: #333;
+
+body {
+
+	background: url(http://subtlepatterns.com/patterns/bright_squares.png);
+	font: 14px/1.4 "Helvetica Neue", "Lucida Grande", "Arial";
+	width: 100%;
+
+	.strip {
+
+		display: none;
+		background: rgba(55,23,64,0.2);
+		-webkit-box-shadow: 0 0 8px #333;
+		width: 100%;
+		height: 10px;
+		margin: 0 0 30px 0;
+
+	}
+
+	& > header {
+
+		margin: 15px 0 30px 0;
+		padding: 8px 20px 8px 20px;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+
+		background: $color-header;
+		color: #FFF;
+
+		h1 {
+			font-size: 36px;
+			margin: 5px 0 5px 0;
+			font-family: 'Snippet', sans-serif;
+			-webkit-box-flex: 1;
+		}
+
+		nav {
+
+			margin: 21px 0 0 0;
+
+			ul {
+
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					float: left;
+					margin-right: 10px;
+					content: '|';
+
+					a {
+						color: #FFFFFF;
+						text-decoration: none;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	div.content {
+
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-webkit-box-pack: center;
+		width: 70%;
+		margin: 0 auto;
+
+		h2 {
+			font-size: 36px;
+			font-weight: 600;
+			font-family: 'Signika Negative', sans-serif;
+			color: $color-headings;
+		}
+
+		p {
+			margin: 10px 0;
+		}
+
+		ul {
+
+			margin: 10px;
+
+			li {
+				list-style: disc;
+				margin: 0 0 0 16px;
+			}
+
+		}
+
+		article, section {
+
+			-webkit-box-flex: 1;
+
+			header {
+
+				h1 {
+					font-size: 42px;
+					font-weight: 700;
+					font-family: 'Signika Negative', sans-serif;
+					color: $color-headings;
+					margin-bottom: 20px;
+				}
+
+			}
+
+			section {
+
+				h1 {
+
+					font-size: 36px;
+					font-weight: 600;
+					font-family: 'Signika Negative', sans-serif;
+					color: $color-headings;
+
+				}
+
+			}
+
+			article.teaser {
+
+				margin-bottom: 40px;
+
+				header {
+
+					h1 {
+						font-size: 24px;
+						margin: 0;
+						float: left;
+					}
+
+					time {
+						float: right;
+					}
+
+				}
+
+				p {
+					clear: left;
+				}
+
+			}
+
+		}
+
+		aside.left {
+			margin: 0 3% 0 -5%; /* give the whole article a more balanced look, when we actually have an aside */
+			font-size: 0.85em;
+		}
+
+	}
+
+	footer {
+		margin: 40px 20px 0 20px;
+	}
+
+}
+
+@media screen and (max-width: 720px) {
+	
+	body {
+
+		& > header {
+
+			display: block;
+			margin: 8px 0 30px 0;
+			text-align: center;
+			background: $color-header;
+			color: #333;
+			overflow: hidden;
+
+			h1 {
+				font-size: 28px;
+				color: #FFF;
+			}
+
+			nav {
+
+				margin: 0;
+				display: -webkit-box;
+
+				ul {
+
+					margin: 0 auto;
+
+					li {
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		div.content {
+
+			width: 90%;
+
+			article {
+				h1 {
+					line-height: 40px;
+				}
+				section {
+					h1 {
+						line-height: 38px;
+					}
+				}
+			}
+
+			aside.left {
+				display: none;
+			}
+
+		}
+
+		footer {
+			margin: 0 20px 0 20px;
+		}
+
+	}
+
+}

@@ -1,36 +1,20 @@
-!!! 5
-html(lang='en')
-	head
-		meta(charset='utf-8')
-		title= locals.title
-	body
-		h1= page.title
-		!= page.html
+extends layout
 
-		h2
-			a(href='/posts/') Posts
+block content-body
+	section
+		header
+			h1 Recent updates
 
-		- var posts = _.chain(contents.posts._.directories).map(function (item) {
+		- var objs = _.chain(_.union(contents.posts._.directories,contents.kb._.directories)).map(function (item) {
 		- return item.index
 		- }).compact().sortBy(function (item) {
 		- return -item.date
 		- }).first(5).value();
 
-		each post in posts
-			post.post
+		each obj in objs
+			article(class='teaser #{obj._filename.replace(/(.*?)\/(.*)/, "$1")}')
 				header
-					h3= post.title
-
-		h2
-			a(href='/kb/') Knowledge Base Articles
-
-		- var kbentries = _.chain(contents.kb._.directories).map(function (item) {
-		- return item.index
-		- }).compact().sortBy(function (item) {
-		- return -item.date
-		- }).first(5).value();
-
-		each kb in kbentries
-			kb.post
-				header
-					h3= kb.title
+					h1= obj.title
+					time(datetime='#{obj.date}') published #{obj.date.toDateString()}
+				p= obj.metadata.teaser
+				a(href='#{obj.url}') read more

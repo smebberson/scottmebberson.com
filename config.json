@@ -1,5 +1,6 @@
 {
   "locals": {
-    "title": "Bare minimum wintersmith site"
-  }
+    "title": "scottmebberson.com"
+  },
+  "plugins": ["wintersmith-sass"]
 }

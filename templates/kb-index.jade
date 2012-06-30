@@ -1,10 +1,9 @@
-!!! 5
-html(lang='en')
-	head
-		meta(charset='utf-8')
-		title= locals.title
-	body
-		h1= page.title
+extends layout
+
+block content-body
+	section
+		header
+			h1 Knowledge base entries
 		!= page.html
 
 		- var kbentries = _.chain(contents.kb._.directories).map(function (item) {
@@ -14,6 +13,9 @@ html(lang='en')
 		- }).first(5).value();
 
 		each kb in kbentries
-			kb.post
+			article(class='teaser #{kb._filename.replace(/(.*?)\/(.*)/, "$1")}')
 				header
-					h2= kb.title
+					h1= kb.title
+					time(datetime='#{kb.date}') published #{kb.date.toDateString()}
+				p= kb.metadata.teaser
+				a(href='#{kb.url}') read more

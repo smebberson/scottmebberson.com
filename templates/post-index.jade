@@ -1,10 +1,9 @@
-!!! 5
-html(lang='en')
-	head
-		meta(charset='utf-8')
-		title= locals.title
-	body
-		h1= page.title
+extends layout
+
+block content-body
+	section
+		header
+			h1 Posts
 		!= page.html
 
 		- var posts = _.chain(contents.posts._.directories).map(function (item) {
@@ -14,6 +13,9 @@ html(lang='en')
 		- }).first(5).value();
 
 		each post in posts
-			post.post
+			article(class='teaser #{post._filename.replace(/(.*?)\/(.*)/, "$1")}')
 				header
-					h2= post.title
+					h1= post.title
+					time(datetime='#{post.date}') published #{post.date.toDateString()}
+				p= post.metadata.teaser
+				a(href='#{post.url}') read more
