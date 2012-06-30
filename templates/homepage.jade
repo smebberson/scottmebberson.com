@@ -1,0 +1,36 @@
+!!! 5
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title= locals.title
+	body
+		h1= page.title
+		!= page.html
+
+		h2
+			a(href='/posts/') Posts
+
+		- var posts = _.chain(contents.posts._.directories).map(function (item) {
+		- return item.index
+		- }).compact().sortBy(function (item) {
+		- return -item.date
+		- }).first(5).value();
+
+		each post in posts
+			post.post
+				header
+					h3= post.title
+
+		h2
+			a(href='/kb/') Knowledge Base Articles
+
+		- var kbentries = _.chain(contents.kb._.directories).map(function (item) {
+		- return item.index
+		- }).compact().sortBy(function (item) {
+		- return -item.date
+		- }).first(5).value();
+
+		each kb in kbentries
+			kb.post
+				header
+					h3= kb.title

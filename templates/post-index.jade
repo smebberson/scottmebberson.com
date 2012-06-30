@@ -1,0 +1,19 @@
+!!! 5
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title= locals.title
+	body
+		h1= page.title
+		!= page.html
+
+		- var posts = _.chain(contents.posts._.directories).map(function (item) {
+		- return item.index
+		- }).compact().sortBy(function (item) {
+		- return -item.date
+		- }).first(5).value();
+
+		each post in posts
+			post.post
+				header
+					h2= post.title
