@@ -1,0 +1,1 @@
+swfobject.embedSWF("./swf/Squares.swf", "haxe:flash", "100%", "280", "11.0.0");

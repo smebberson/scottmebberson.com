@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta chartset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Scott Mebberson">
+  <title>scottmebberson.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css" type="text/css" media="screen">
+</head>
+<body>
+  <header>
+    <h1>scottmebberson.com</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts/">Posts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <article>
+      <header>
+        <h1>My first attempt at Haxe</h1>
+      </header><p>I&apos;ve been aware of <a href="http://haxe.org/">Haxe</a> for some time. Up until now, I&apos;ve mostly wanted to target Flash so I just didn&apos;t bother with it. Recently, I&apos;ve been looking into ways to target iOS and Android from the one code base and stumbled across <a href="http://haxenme.org/">NME</a>.
+
+</p>
+<p>NME is a framework built on top of Haxe. It enables you to target Flash, iOS, Android, JavaScript and even HTML5; all from the one source. Sounds too good to be true, so I decided to give it shot.
+
+</p>
+<p>I wrote a quick script that randomly outputs squares on the stage, just something simple.
+
+</p>
+<h2>The source</h2>
+<script src="https://gist.github.com/3033231.js"> </script>
+
+<p>You should be able to get it to build cleanly with any of the following:
+
+</p>
+<pre><code>nme test project.nmml flash
+nme test project.nmml html5
+nme test project.nmml ios -simulator</code></pre>
+<h2>SWF output</h2>
+<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script src="./js/embed.js"></script>
+<div id="haxe:flash" style="background-color: #FFFFFF; height: 280px">iOS devices won&apos;t show this version :)</div>
+
+<h2>HTML5 output</h2>
+
+<div id="haxe:jeash" style="background-color: #ffffff; height: 280px; clear: right;" data-framerate="30"></div>
+<script type="text/javascript" src="./js/Squares.js"></script>
+    </article>
+  </div>
+  <footer></footer>
+</body></html>
