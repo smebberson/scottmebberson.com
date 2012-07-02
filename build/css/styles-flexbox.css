@@ -41,7 +41,8 @@ body {
     -webkit-box-direction: reverse;
     -webkit-box-pack: center;
     width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 40px; }
     body div.content h2 {
       font-size: 36px;
       font-weight: 600;
@@ -87,26 +88,31 @@ body {
 @media screen and (max-width: 720px) {
   body > header {
     display: block;
-    margin: 8px 0 30px 0;
+    margin: 0 0 30px 0;
     text-align: center;
     background: #6600ff;
     color: #333;
     overflow: hidden; }
     body > header h1 {
       font-size: 28px;
-      color: #FFF; }
+      color: #FFF;
+      margin: 0; }
     body > header nav {
       margin: 0;
-      display: -webkit-box; }
+      display: -webkit-box;
+      -webkit-box-pack: center; }
       body > header nav ul {
         margin: 0 auto; }
         body > header nav ul li {
           text-align: center; }
   body div.content {
     width: 90%; }
-    body div.content article h1 {
-      line-height: 40px; }
-    body div.content article section h1 {
+    body div.content article header h1, body div.content section header h1 {
+      font-size: 30px;
+      margin: 0 0 14px 0; }
+    body div.content article header h2, body div.content section header h2 {
+      font-size: 20px; }
+    body div.content article section h1, body div.content section section h1 {
       line-height: 38px; }
     body div.content aside.left {
       display: none; }

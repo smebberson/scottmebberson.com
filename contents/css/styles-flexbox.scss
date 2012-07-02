@@ -75,6 +75,7 @@ body {
 		-webkit-box-pack: center;
 		width: 70%;
 		margin: 0 auto;
+		margin-bottom: 40px;
 
 		h2 {
 			font-size: 36px;
@@ -173,7 +174,7 @@ body {
 		& > header {
 
 			display: block;
-			margin: 8px 0 30px 0;
+			margin: 0 0 30px 0;
 			text-align: center;
 			background: $color-header;
 			color: #333;
@@ -182,12 +183,14 @@ body {
 			h1 {
 				font-size: 28px;
 				color: #FFF;
+				margin: 0;
 			}
 
 			nav {
 
 				margin: 0;
 				display: -webkit-box;
+				-webkit-box-pack: center;
 
 				ul {
 
@@ -204,10 +207,21 @@ body {
 
 			width: 90%;
 
-			article {
-				h1 {
-					line-height: 40px;
+			article, section {
+
+				header {
+
+					h1 {
+						font-size: 30px;
+						margin: 0 0 14px 0;
+					}
+
+					h2 {
+						font-size: 20px;
+					}
+
 				}
+
 				section {
 					h1 {
 						line-height: 38px;
