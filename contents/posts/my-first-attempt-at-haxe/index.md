@@ -1,6 +1,7 @@
 title: My first attempt at Haxe
 date: 2012-07-02
 teaser: I've finally given Haxe a shot, I wish I didn't wait so long!
+status: published
 template: post.jade
 
 I've been aware of [Haxe](http://haxe.org/) for some time. Up until now, I've mostly wanted to target Flash so I just didn't bother with it. Recently, I've been looking into ways to target iOS and Android from the one code base and stumbled across [NME](http://haxenme.org/).
@@ -27,5 +28,5 @@ You should be able to get it to build cleanly with any of the following:
 
 <h2>HTML5 output</h2>
 
-<div id="haxe:jeash" style="background-color: #ffffff; height: 280px; clear: right;" data-framerate="30"></div>
+<div id="haxe:jeash" style="background-color: #ffffff; height: 280px; overflow: hidden; position: relative !important;" data-framerate="30"></div>
 <script type="text/javascript" src="./js/Squares.js"></script>

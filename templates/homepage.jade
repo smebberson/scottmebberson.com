@@ -11,10 +11,11 @@ block content-body
 		- return -item.date
 		- }).first(5).value();
 
-		each obj in objs
-			article(class='teaser #{obj._filename.replace(/(.*?)\/(.*)/, "$1")}')
-				header
-					h1= obj.title
-					time(datetime='#{obj.date}') published #{obj.date.toDateString()}
-				p= obj.metadata.teaser
-				a(href='#{obj.url}') read more
+		for obj in objs
+			unless obj.metadata.status === 'draft'
+				article(class='teaser #{obj._filename.replace(/(.*?)\/(.*)/, "$1")}')
+					header
+						h1= obj.title
+						time(datetime='#{obj.date}') published #{obj.date.toDateString()}
+					p= obj.metadata.teaser
+					a(href='#{obj.url}') read more

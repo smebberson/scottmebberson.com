@@ -13,9 +13,10 @@ block content-body
 		- }).first(5).value();
 
 		each kb in kbentries
-			article(class='teaser #{kb._filename.replace(/(.*?)\/(.*)/, "$1")}')
-				header
-					h1= kb.title
-					time(datetime='#{kb.date}') published #{kb.date.toDateString()}
-				p= kb.metadata.teaser
-				a(href='#{kb.url}') read more
+			unless kb.metadata.status === 'draft'
+				article(class='teaser #{kb._filename.replace(/(.*?)\/(.*)/, "$1")}')
+					header
+						h1= kb.title
+						time(datetime='#{kb.date}') published #{kb.date.toDateString()}
+					p= kb.metadata.teaser
+					a(href='#{kb.url}') read more
