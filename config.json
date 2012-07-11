@@ -2,5 +2,8 @@
   "locals": {
     "title": "scottmebberson.com"
   },
-  "plugins": ["wintersmith-sass"]
+  "plugins": [
+  	"wintersmith-jade",
+  	"wintersmith-sass"
+  ]
 }
