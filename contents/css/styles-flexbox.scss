@@ -99,6 +99,24 @@ body {
 
 		}
 
+		pre {
+
+			color: #333;
+			background-color: rgba(200,200,200,.4);
+			border: 1px solid #CCC;
+			padding: 8px 10px;
+			border-radius: 3px;
+			margin: 10px 0;
+
+			code {
+
+				font-size: 12px;
+				font-family: Consolas, Menlo, Courier, monospace;
+
+			}
+
+		}
+
 		article, section {
 
 			-webkit-box-flex: 1;
@@ -126,6 +144,17 @@ body {
 
 				}
 
+			}
+
+			div#social {
+				margin: 30px 0 20px 0;
+				padding: 10px;
+				background: rgba(100,100,100,.2);
+				-webkit-border-radius: 6px;
+			}
+
+			div#livefyre {
+				margin: 0 !important;
 			}
 
 			article.teaser {
