@@ -1,7 +1,11 @@
 @import url(reset.css);
 body {
   background: url(http://subtlepatterns.com/patterns/bright_squares.png);
-  font: 14px/1.4 "Helvetica Neue", "Lucida Grande", "Arial";
+  font-size: .92em;
+  font-family: "acuta", sans;
+  font-weight: 200;
+  font-style: normal;
+  line-height: 180%;
   width: 100%; }
   body .strip {
     display: none;
@@ -11,7 +15,7 @@ body {
     height: 10px;
     margin: 0 0 30px 0; }
   body > header {
-    margin: 15px 0 30px 0;
+    margin: 15px 0 42px 0;
     padding: 8px 20px 8px 20px;
     display: -webkit-box;
     -webkit-box-orient: horizontal;
@@ -23,7 +27,11 @@ body {
       font-family: 'Snippet', sans-serif;
       -webkit-box-flex: 1; }
     body > header nav {
-      margin: 21px 0 0 0; }
+      margin: 10px 0 0 0;
+      font-family: "museo-sans", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 100%; }
       body > header nav ul {
         list-style: none;
         margin: 0;
@@ -45,8 +53,8 @@ body {
     margin-bottom: 40px; }
     body div.content h2 {
       font-size: 36px;
-      font-weight: 600;
-      font-family: 'Signika Negative', sans-serif;
+      font-weight: 700;
+      font-family: "museo-sans", sans-serif;
       color: #333333; }
     body div.content p {
       margin: 10px 0; }
@@ -70,14 +78,18 @@ body {
       body div.content article header h1, body div.content section header h1 {
         font-size: 42px;
         font-weight: 700;
-        font-family: 'Signika Negative', sans-serif;
+        font-family: "museo-sans", sans-serif;
+        letter-spacing: -0.03em;
         color: #333333;
-        margin-bottom: 20px; }
+        margin: 0 0 .7em 0; }
       body div.content article section h1, body div.content section section h1 {
         font-size: 36px;
-        font-weight: 600;
-        font-family: 'Signika Negative', sans-serif;
+        font-weight: 700;
+        font-family: "museo-sans", sans-serif;
         color: #333333; }
+      body div.content article h2, body div.content section h2 {
+        margin: .75em 0 .5em 0;
+        letter-spacing: -0.03em; }
       body div.content article div#social, body div.content section div#social {
         margin: 30px 0 20px 0;
         padding: 10px;
@@ -99,6 +111,9 @@ body {
       margin: 0 3% 0 -5%;
       /* give the whole article a more balanced look, when we actually have an aside */
       font-size: 0.85em; }
+  body .gist .gist-file .gist-data pre {
+    font-size: .9em;
+    line-height: 130%; }
   body footer {
     margin: 40px 20px 0 20px; }
 

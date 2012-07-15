@@ -4,11 +4,17 @@ $content-margin-external: 60px;
 $content-margin-internal: 40px;
 $color-header: #6600ff;
 $color-headings: #333;
+$font: 'acuta', sans;
+$font-headings: 'museo-sans', sans-serif;
 
 body {
 
 	background: url(http://subtlepatterns.com/patterns/bright_squares.png);
-	font: 14px/1.4 "Helvetica Neue", "Lucida Grande", "Arial";
+	font-size: .92em;
+	font-family: $font;
+	font-weight: 200;
+	font-style: normal;
+	line-height: 180%;
 	width: 100%;
 
 	.strip {
@@ -24,7 +30,7 @@ body {
 
 	& > header {
 
-		margin: 15px 0 30px 0;
+		margin: 15px 0 42px 0;
 		padding: 8px 20px 8px 20px;
 		display: -webkit-box;
 		-webkit-box-orient: horizontal;
@@ -41,7 +47,11 @@ body {
 
 		nav {
 
-			margin: 21px 0 0 0;
+			margin: 10px 0 0 0;
+			font-family: $font-headings;
+			font-weight: 300;
+			font-style: normal;
+			line-height: 100%;
 
 			ul {
 
@@ -79,8 +89,8 @@ body {
 
 		h2 {
 			font-size: 36px;
-			font-weight: 600;
-			font-family: 'Signika Negative', sans-serif;
+			font-weight: 700;
+			font-family: $font-headings;
 			color: $color-headings;
 		}
 
@@ -126,9 +136,10 @@ body {
 				h1 {
 					font-size: 42px;
 					font-weight: 700;
-					font-family: 'Signika Negative', sans-serif;
+					font-family: $font-headings;
+					letter-spacing: -.03em;
 					color: $color-headings;
-					margin-bottom: 20px;
+					margin: 0 0 .7em 0;
 				}
 
 			}
@@ -138,12 +149,17 @@ body {
 				h1 {
 
 					font-size: 36px;
-					font-weight: 600;
-					font-family: 'Signika Negative', sans-serif;
+					font-weight: 700;
+					font-family: $font-headings;
 					color: $color-headings;
 
 				}
 
+			}
+
+			h2 {
+				margin: .75em 0 .5em 0;
+				letter-spacing: -.03em;
 			}
 
 			div#social {
@@ -188,6 +204,11 @@ body {
 			font-size: 0.85em;
 		}
 
+	}
+
+	.gist .gist-file .gist-data pre {
+		font-size: .9em;
+		line-height: 130%;
 	}
 
 	footer {
