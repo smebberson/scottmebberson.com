@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta chartset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Scott Mebberson">
+  <title>scottmebberson.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css" type="text/css" media="screen">
+  <script src="http://use.typekit.com/brk1hsz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33401748-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script src="http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js"></script>
+  <script>
+    var fyre = LF({
+     site_id: 307073,
+     article_id: 'a-markdown-proposalindex.html'
+    });
+    
+  </script>
+</head>
+<body>
+  <header>
+    <h1>scottmebberson.com</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts/">Posts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <article>
+      <header>
+        <h1>A Markdown proposal: section</h1>
+      </header><p><strong><em>This is a proposal to John Gruber and the Markdown community.</em></strong>
+
+</p>
+<p>But first, I&#39;d like to proclaim my love for Markdown. I really do love it. I can&#39;t get enough. I&#39;ve even developed my <a href="http://www.notonomous.com/">own web application</a> to enable Markdown documents to be synced between my computer and iPad - just so I can write notes in Markdown. The <a href="https://github.com/smebberson/scottmebberson.com/tree/master/build">content of this website</a> is also written in Markdown.
+
+</p>
+<p>I know people have extended Markdown over time, with some reaching popularirty including <a href="http://github.github.com/github-flavored-markdown/">gfm</a> and <a href="http://michelf.ca/projects/php-markdown/extra/">Markdown Extra</a>. But this is a proposal that I think needs to be added to <a href="http://daringfireball.net/projects/markdown/syntax/">Markdown&#39;s core syntax</a>. <em><strong>Let&#39;s face it, HTML has moved on (read: HTML5), and so it only makes sense that our favourite HTML authoring language should too!</strong></em>
+
+</p>
+<p>I&#39;m proposing the ability to define a section. A section when converted to HTML would be translated to a <code>&lt;section&gt;</code> tag, with a <code>h1</code>. A section should be seen as a hierachy above headings, just like the <code>&lt;section&gt;</code> tag in HTML5.
+
+</p>
+<p>Here are a couple of examples:
+</p>
+<pre><code>== Section heading</code></pre>
+<p>or,
+</p>
+<pre><code>Section heading
+===============
+===============</code></pre>
+<p>would produce:
+</p>
+<pre><code>&lt;section&gt;&lt;h1&gt;Section heading&lt;/h1&gt;&lt;/section&gt;</code></pre>
+<p>The above proposal maintains the <em>easy-to-read, easy-to-write plain text format</em> mantra of Markdown.
+
+</p>
+<p>I chose two equal signs (<code>==</code>) because they carry more weight than dashes (<code>--</code>) and provide a visual priority over headings when reading or writing Markdown in plain text.
+
+</p>
+<p><strong><em>So John, what do you think?</em></strong></p>
+
+      <div id="social">
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
+      </div>
+      <div id="livefyre"></div>
+    </article>
+  </div>
+  <footer></footer>
+</body></html>

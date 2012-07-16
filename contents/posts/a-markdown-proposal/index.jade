@@ -1,0 +1,35 @@
+title = 'A Markdown proposal: section'
+date = '2012-07-17'
+teaser = 'A proposal to John Gruber and the Markdown community. I'm proposing a new syntax to allow for document sections.'
+status = 'publish'
+template = 'post.jade'
+
+:markdown
+	__*This is a proposal to John Gruber and the Markdown community.*__
+
+	But first, I'd like to proclaim my love for Markdown. I really do love it. I can't get enough. I've even developed my [own web application](http://www.notonomous.com/) to enable Markdown documents to be synced between my computer and iPad - just so I can write notes in Markdown. The [content of this website](https://github.com/smebberson/scottmebberson.com/tree/master/build) is also written in Markdown.
+
+	I know people have extended Markdown over time, with some reaching popularirty including [gfm](http://github.github.com/github-flavored-markdown/) and [Markdown Extra](http://michelf.ca/projects/php-markdown/extra/). But this is a proposal that I think needs to be added to [Markdown's core syntax](http://daringfireball.net/projects/markdown/syntax/). _**Let's face it, HTML has moved on (read: HTML5), and so it only makes sense that our favourite HTML authoring language should too!**_
+
+	I'm proposing the ability to define a section. A section when converted to HTML would be translated to a ```<section>``` tag, with a ```h1```. A section should be seen as a hierachy above headings, just like the ```<section>``` tag in HTML5.
+
+	Here are a couple of examples:
+	```
+	== Section heading
+	```
+	or,
+	```
+	Section heading
+	===============
+	===============
+	```
+	would produce:
+	```
+	<section><h1>Section heading</h1></section>
+	```
+
+	The above proposal maintains the _easy-to-read, easy-to-write plain text format_ mantra of Markdown.
+
+	I chose two equal signs (```==```) because they carry more weight than dashes (```--```) and provide a visual priority over headings when reading or writing Markdown in plain text.
+
+	__*So John, what do you think?*__
