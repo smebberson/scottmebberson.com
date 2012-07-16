@@ -51,11 +51,18 @@ body {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 40px; }
-    body div.content h2 {
-      font-size: 36px;
-      font-weight: 700;
+    body div.content h2, body div.content h3, body div.content h4, body div.content h5, body div.content h6 {
       font-family: "museo-sans", sans-serif;
+      font-weight: 700;
       color: #333333; }
+    body div.content h2 {
+      font-size: 36px; }
+    body div.content h3 {
+      font-size: 32px; }
+    body div.content h4 {
+      font-size: 28px; }
+    body div.content h5 {
+      font-size: 22px; }
     body div.content p {
       margin: 10px 0; }
     body div.content ul {
@@ -70,9 +77,13 @@ body {
       padding: 8px 10px;
       border-radius: 3px;
       margin: 10px 0; }
-      body div.content pre code {
-        font-size: 12px;
-        font-family: Consolas, Menlo, Courier, monospace; }
+    body div.content code {
+      font-size: 12px;
+      font-family: Consolas, Menlo, Courier, monospace; }
+    body div.content em {
+      font-style: italic; }
+    body div.content strong {
+      font-weight: 700; }
     body div.content article, body div.content section {
       -webkit-box-flex: 1; }
       body div.content article header h1, body div.content section header h1 {
@@ -87,7 +98,7 @@ body {
         font-weight: 700;
         font-family: "museo-sans", sans-serif;
         color: #333333; }
-      body div.content article h2, body div.content section h2 {
+      body div.content article h2, body div.content article h3, body div.content article h4, body div.content article h5, body div.content section h2, body div.content section h3, body div.content section h4, body div.content section h5 {
         margin: .75em 0 .5em 0;
         letter-spacing: -0.03em; }
       body div.content article div#social, body div.content section div#social {
@@ -99,14 +110,20 @@ body {
         margin: 0 !important; }
       body div.content article article.teaser, body div.content section article.teaser {
         margin-bottom: 40px; }
-        body div.content article article.teaser header h1, body div.content section article.teaser header h1 {
-          font-size: 24px;
-          margin: 0;
-          float: left; }
-        body div.content article article.teaser header time, body div.content section article.teaser header time {
-          float: right; }
+        body div.content article article.teaser header, body div.content section article.teaser header {
+          overflow: hidden; }
+          body div.content article article.teaser header h1, body div.content section article.teaser header h1 {
+            font-size: 24px;
+            margin: 0;
+            float: left; }
+          body div.content article article.teaser header time, body div.content section article.teaser header time {
+            float: right;
+            font-weight: bold; }
         body div.content article article.teaser p, body div.content section article.teaser p {
-          clear: left; }
+          clear: left;
+          width: 70%;
+          line-height: 130%;
+          margin: 10px 0 0 0; }
     body div.content aside.left {
       margin: 0 3% 0 -5%;
       /* give the whole article a more balanced look, when we actually have an aside */
@@ -146,6 +163,12 @@ body {
       font-size: 20px; }
     body div.content article section h1, body div.content section section h1 {
       line-height: 38px; }
+    body div.content article article.teaser header h1, body div.content section article.teaser header h1 {
+      float: none; }
+    body div.content article article.teaser header time, body div.content section article.teaser header time {
+      float: none; }
+    body div.content article article.teaser p, body div.content section article.teaser p {
+      width: auto; }
     body div.content aside.left {
       display: none; }
   body footer {

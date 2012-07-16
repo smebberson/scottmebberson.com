@@ -87,11 +87,26 @@ body {
 		margin: 0 auto;
 		margin-bottom: 40px;
 
+		h2, h3, h4, h5, h6 {
+			font-family: $font-headings;
+			font-weight: 700;
+			color: $color-headings;
+		}
+
 		h2 {
 			font-size: 36px;
-			font-weight: 700;
-			font-family: $font-headings;
-			color: $color-headings;
+		}
+
+		h3 {
+			font-size: 32px;
+		}
+
+		h4 {
+			font-size: 28px;
+		}
+
+		h5 {
+			font-size: 22px;
 		}
 
 		p {
@@ -110,21 +125,25 @@ body {
 		}
 
 		pre {
-
 			color: #333;
 			background-color: rgba(200,200,200,.4);
 			border: 1px solid #CCC;
 			padding: 8px 10px;
 			border-radius: 3px;
 			margin: 10px 0;
+		}
 
-			code {
+		code {
+			font-size: 12px;
+			font-family: Consolas, Menlo, Courier, monospace;
+		}
 
-				font-size: 12px;
-				font-family: Consolas, Menlo, Courier, monospace;
+		em {
+			font-style: italic;
+		}
 
-			}
-
+		strong {
+			font-weight: 700;
 		}
 
 		article, section {
@@ -157,7 +176,7 @@ body {
 
 			}
 
-			h2 {
+			h2, h3, h4, h5 {
 				margin: .75em 0 .5em 0;
 				letter-spacing: -.03em;
 			}
@@ -179,6 +198,8 @@ body {
 
 				header {
 
+					overflow: hidden;
+
 					h1 {
 						font-size: 24px;
 						margin: 0;
@@ -187,12 +208,16 @@ body {
 
 					time {
 						float: right;
+						font-weight: bold;
 					}
 
 				}
 
 				p {
 					clear: left;
+					width: 70%;
+					line-height: 130%;
+					margin: 10px 0 0 0;
 				}
 
 			}
@@ -277,6 +302,27 @@ body {
 						line-height: 38px;
 					}
 				}
+
+				article.teaser {
+
+					header {
+
+						h1 {
+							float: none;
+						}
+
+						time {
+							float: none;
+						}
+
+					}
+
+					p {
+						width: auto;
+					}
+
+				}
+
 			}
 
 			aside.left {
