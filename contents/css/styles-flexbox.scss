@@ -4,13 +4,13 @@ $content-margin-external: 60px;
 $content-margin-internal: 40px;
 $color-header: #6600ff;
 $color-headings: #333;
-$font: 'acuta', sans;
+$font: 'nimbus-sans', sans;
 $font-headings: 'museo-sans', sans-serif;
 
 body {
 
 	background: url(http://subtlepatterns.com/patterns/bright_squares.png);
-	font-size: .92em;
+	font-size: 1em;
 	font-family: $font;
 	font-weight: 200;
 	font-style: normal;
@@ -37,6 +37,8 @@ body {
 
 		background: $color-header;
 		color: #FFF;
+
+		-webkit-box-shadow: 0px 0px 16px #AAA;
 
 		h1 {
 			font-size: 36px;
@@ -194,7 +196,14 @@ body {
 
 			article.teaser {
 
-				margin-bottom: 40px;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid #CCC;
+
+				&:first-of-type {
+					border-top: 1px solid #CCC;
+					padding-top: 20px;
+				}
 
 				header {
 
