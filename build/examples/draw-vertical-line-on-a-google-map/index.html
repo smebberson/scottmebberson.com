@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <meta chartset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Scott Mebberson">
+  <title>scottmebberson.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css?v=1" type="text/css" media="screen">
+  <script src="http://use.typekit.com/brk1hsz.js"></script>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33401748-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>scottmebberson.com</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/examples/">Examples</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <article>
+      <header>
+        <h1>Drawing on a Google Map using pixel space</h1>
+      </header>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA03erG6MsO7uVcF1SjrDtltrmmJYr2D-M&amp;sensor=false"></script><script type="text/javascript">
+(function() {
+  var convertPixels, initialiseGoogleMap,
+    _this = this;
+
+  initialiseGoogleMap = function() {
+    var mapOptions;
+    mapOptions = {
+      center: new google.maps.LatLng(-34.397, 150.644),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    this.map = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
+    this.overlay = new google.maps.OverlayView();
+    this.overlay.draw = function() {};
+    this.overlay.setMap(this.map);
+    return setTimeout(getCenter, 100);
+  };
+
+  this.lineSymbol = {
+    path: 'M 0,-1 0, 1',
+    strokeOpacity: 1,
+    strokeWeight: 1,
+    scale: 3
+  };
+
+  this.getCenter = function() {
+    var bottom, center, middle, polyline;
+    center = map.getCenter();
+    middle = $('#mapcanvas').width() / 2;
+    bottom = $('#mapcanvas').height();
+    _this.aLines = [convertPixels(middle, 0), convertPixels(middle, bottom)];
+    return polyline = new google.maps.Polyline({
+      path: aLines,
+      strokeOpacity: 0,
+      icons: [
+        {
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '10px'
+        }
+      ],
+      map: map
+    });
+  };
+
+  convertPixels = function(x, y) {
+    return overlay.getProjection().fromDivPixelToLatLng(new google.maps.Point(x, y));
+  };
+
+  window.addEventListener('load', initialiseGoogleMap);
+
+}).call(this);
+</script><p>Most things on Google Maps require you to use latitude and longitude, which can make things a little tricky when trying to draw on the map. There is a great little class buried in the v3 API that makes this pretty easy though.
+
+</p>
+<p>The <a href="https://developers.google.com/maps/documentation/javascript/reference#MapCanvasProjection">MapCanvasProjection</a> class, while difficult to get at, allows you to draw on a map using pixel space coordinates rather than latitude and longitude. Take a look at the dashed line below. It was drawn using the divs height and width in pixels.
+</p>
+
+<div id="mapcanvas" style="border: 1px solid #555; width: 100%; height: 240px;">
+  <p>this is the map</p>
+</div><p>The object is made available to the OverlayView from within the draw method, make it a little tough to get at. Use the following code to obtain a reference to the <code>MapCanvasProjection</code> class:
+
+</p>
+<pre><code>overlay = new google.maps.OverlayView();
+overlay.draw = function() {};
+overlay.setMap(map);
+mapCanvasProjection = overlay.getProjection();</code></pre>
+<p>Once you have the reference, things become much easier!
+
+</p>
+<pre><code>convertPixels = function(x, y) {
+ return mapCanvasProject.fromDivPixelToLatLng(new google.maps.Point(x, y));
+};
+
+top = 0;
+middle = $(&#39;#mapcanvas&#39;).width() / 2;
+bottom = $(&#39;#mapcanvas&#39;).height();
+
+aLines = [convertPixels(middle, top), convertPixels(middle, bottom)];
+
+polyline = new google.maps.Polyline({
+ path: aLines,
+ strokeOpacity: 1,
+ strokeWeight: 1,
+ map: map
+});</code></pre>
+<p>You can <a href="https://gist.github.com/3225609">download a working version of the example</a>.</p>
+
+    </article>
+  </div>
+  <footer></footer>
+</body></html>

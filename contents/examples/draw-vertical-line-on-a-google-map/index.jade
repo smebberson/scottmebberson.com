@@ -1,0 +1,85 @@
+title = 'Drawing on a Google Map using pixel space'
+date = '2012-08-01'
+teaser = 'This example shows how to draw lines on a Google Map, using pixel space rather than lat/lng.'
+status = 'publish'
+template = 'examples.jade'
+
+script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyA03erG6MsO7uVcF1SjrDtltrmmJYr2D-M&sensor=false')
+:coffeescript
+	initialiseGoogleMap = () ->
+		mapOptions =
+			center: new google.maps.LatLng -34.397, 150.644
+			zoom: 8
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		@map = new google.maps.Map document.getElementById('mapcanvas'), mapOptions
+		@overlay = new google.maps.OverlayView()
+		@overlay.draw = () ->
+		@overlay.setMap @map
+		setTimeout getCenter, 100
+
+	@lineSymbol =
+		path: 'M 0,-1 0, 1'
+		strokeOpacity: 1
+		strokeWeight: 1
+		scale: 3
+
+	@getCenter = () =>
+		center = map.getCenter()
+		middle = $('#mapcanvas').width()/2
+		bottom = $('#mapcanvas').height()
+		@aLines = [convertPixels(middle, 0), convertPixels(middle, bottom)]
+		polyline = new google.maps.Polyline
+			path: aLines
+			strokeOpacity: 0
+			icons: [
+				icon: lineSymbol
+				offset: '0'
+				repeat: '10px'
+			]
+			map: map
+
+	convertPixels = (x, y) ->
+		overlay.getProjection().fromDivPixelToLatLng new google.maps.Point x, y
+
+	window.addEventListener 'load', initialiseGoogleMap
+
+:markdown
+	Most things on Google Maps require you to use latitude and longitude, which can make things a little tricky when trying to draw on the map. There is a great little class buried in the v3 API that makes this pretty easy though.
+
+	The [MapCanvasProjection](https://developers.google.com/maps/documentation/javascript/reference#MapCanvasProjection) class, while difficult to get at, allows you to draw on a map using pixel space coordinates rather than latitude and longitude. Take a look at the dashed line below. It was drawn using the divs height and width in pixels.
+
+div#mapcanvas(style='border: 1px solid #555; width: 100%; height: 240px;')
+	p this is the map
+
+:markdown
+	The object is made available to the OverlayView from within the draw method, make it a little tough to get at. Use the following code to obtain a reference to the ```MapCanvasProjection``` class:
+
+	```
+	overlay = new google.maps.OverlayView();
+	overlay.draw = function() {};
+	overlay.setMap(map);
+	mapCanvasProjection = overlay.getProjection();
+	```
+
+	Once you have the reference, things become much easier!
+
+	```
+	convertPixels = function(x, y) {
+		return mapCanvasProject.fromDivPixelToLatLng(new google.maps.Point(x, y));
+	};
+
+	top = 0;
+	middle = $('#mapcanvas').width() / 2;
+	bottom = $('#mapcanvas').height();
+
+	aLines = [convertPixels(middle, top), convertPixels(middle, bottom)];
+
+	polyline = new google.maps.Polyline({
+		path: aLines,
+		strokeOpacity: 1,
+		strokeWeight: 1,
+		map: map
+	});
+	```
+
+	You can [download a working version of the example](https://gist.github.com/3225609).

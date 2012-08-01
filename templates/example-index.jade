@@ -1,0 +1,22 @@
+extends layout
+
+block content-body
+	section
+		header
+			h1 Examples
+		!= page.html
+
+		- var examples = _.chain(contents.examples._.directories).map(function (item) {
+		- return item.index
+		- }).compact().sortBy(function (item) {
+		- return -item.date
+		- }).first(10).value();
+
+		each example in examples
+			unless example.metadata.status === 'draft'
+				article(class='teaser #{example._filename.replace(/(.*?)\/(.*)/, "$1")}')
+					header
+						h1= example.title
+						time(datetime='#{example.date}') published #{example.date.toDateString()}
+					p= example.metadata.teaser
+					a(href='#{example.url}') read more

@@ -10,7 +10,7 @@ block content-body
 		- return item.index
 		- }).compact().sortBy(function (item) {
 		- return -item.date
-		- }).first(5).value();
+		- }).first(10).value();
 
 		each post in posts
 			unless post.metadata.status === 'draft'

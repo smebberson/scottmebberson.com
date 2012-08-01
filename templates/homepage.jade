@@ -5,11 +5,11 @@ block content-body
 		header
 			h1 Recent updates
 
-		- var objs = _.chain(_.union(contents.posts._.directories,contents.kb._.directories)).map(function (item) {
+		- var objs = _.chain(_.union(contents.posts._.directories,contents.kb._.directories,contents.examples._.directories)).map(function (item) {
 		- return item.index
 		- }).compact().sortBy(function (item) {
 		- return -item.date
-		- }).first(5).value();
+		- }).first(10).value();
 
 		for obj in objs
 			unless obj.metadata.status === 'draft'
