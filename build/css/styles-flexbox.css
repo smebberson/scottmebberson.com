@@ -44,7 +44,8 @@ body > header {
   -webkit-box-orient: horizontal;
   background: #6600ff;
   color: #FFF;
-  -webkit-box-shadow: 0px 0px 16px #AAA; }
+  -webkit-box-shadow: 0px 0px 16px #AAA;
+  overflow: hidden; }
   body > header h1 {
     font-size: 36px;
     margin: 5px 0 5px 0;
