@@ -1,3 +1,4 @@
+
 body {
 	background: url(http://subtlepatterns.com/patterns/bright_squares.png);
 	font-size: 1em;
@@ -24,4 +25,26 @@ a {
 		text-decoration: none;
 	}
 
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+pre {
+	color: #333;
+	background-color: rgba(200,200,200,.4);
+	border: 1px solid #CCC;
+	padding: 8px 10px;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+code {
+	font-size: 12px;
+	font-family: Consolas, Menlo, Courier, monospace;
 }

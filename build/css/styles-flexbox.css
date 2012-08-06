@@ -19,6 +19,24 @@ a {
   a:hover {
     text-decoration: none; }
 
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 700; }
+
+pre {
+  color: #333;
+  background-color: rgba(200, 200, 200, 0.4);
+  border: 1px solid #CCC;
+  padding: 8px 10px;
+  border-radius: 3px;
+  margin: 10px 0; }
+
+code {
+  font-size: 12px;
+  font-family: Consolas, Menlo, Courier, monospace; }
+
 body > header {
   margin: 15px 0 42px 0;
   padding: 8px 20px 8px 20px;
@@ -71,29 +89,11 @@ div.content {
     font-size: 36px; }
   div.content h3 {
     font-size: 32px; }
-  div.content h4 {
-    font-size: 28px; }
-  div.content h5 {
-    font-size: 22px; }
   div.content ul {
     margin: 10px; }
     div.content ul li {
       list-style: disc;
       margin: 0 0 0 16px; }
-  div.content pre {
-    color: #333;
-    background-color: rgba(200, 200, 200, 0.4);
-    border: 1px solid #CCC;
-    padding: 8px 10px;
-    border-radius: 3px;
-    margin: 10px 0; }
-  div.content code {
-    font-size: 12px;
-    font-family: Consolas, Menlo, Courier, monospace; }
-  div.content em {
-    font-style: italic; }
-  div.content strong {
-    font-weight: 700; }
   div.content article, div.content section {
     -webkit-box-flex: 1; }
     div.content article header h1, div.content section header h1 {
