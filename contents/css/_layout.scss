@@ -1,0 +1,60 @@
+
+body > header {
+
+	margin: 15px 0 42px 0;
+	padding: 8px 20px 8px 20px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+
+	background: $color-header;
+	color: #FFF;
+
+	-webkit-box-shadow: 0px 0px 16px #AAA;
+
+	h1 {
+		font-size: 36px;
+		margin: 5px 0 5px 0;
+		font-family: 'Snippet', sans-serif;
+		-webkit-box-flex: 1;
+	}
+
+	nav {
+
+		margin: 10px 0 0 0;
+		font-family: $font-headings;
+		font-weight: 300;
+		font-style: normal;
+		line-height: 100%;
+
+		ul {
+
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float: left;
+				margin-right: 4px;
+				content: '|';
+
+				a {
+
+					color: #FFFFFF;
+					text-decoration: none;
+					padding: 2px 6px;
+					-webkit-border-radius: 5px;
+					-webkit-transition: all .2s;
+
+					&:hover {
+						background: #2E0D7F;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
