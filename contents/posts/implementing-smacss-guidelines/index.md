@@ -1,8 +1,10 @@
+---
 title: Implementing SMACSS
 date: 2012-08-06
 teaser: SMACSS stands for scalable and modular architecture for css, and I'm going to use it to refactor my css code for this site.
 status: published
 template: post.jade
+---
 
 When I decided to [rewrite my personal website](/posts/my-new-site/) I quickly threw the CSS together. I wanted to achieve a few key things:
 

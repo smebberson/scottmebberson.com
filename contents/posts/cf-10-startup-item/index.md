@@ -1,8 +1,10 @@
+---
 title: ColdFusion 10 Startup Item on Mac
 date: 2012-08-29
 teaser: Just a quick note regarding the location of the ColdFusion 10 Startup Item on Mac OS X.
 status: published
 template: post.jade
+---
 
 Just a quick note, because I struggled to find this anywhere else on Google. When I installed ColdFusion 10 (on my Mac, 10.7), I ticked the 'start ColdFusion on startup option'. A few computer restarts later, I've decided to turn that off (my Mac was taking forever to become useable).
 

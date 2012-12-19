@@ -1,8 +1,10 @@
+---
 title: My first attempt at Haxe
 date: 2012-07-02
 teaser: I've finally given Haxe a shot, I wish I didn't wait so long!
 status: published
 template: post.jade
+---
 
 I've been aware of [Haxe](http://haxe.org/) for some time. Up until now, I've mostly wanted to target Flash so I just didn't bother with it. Recently, I've been looking into ways to target iOS and Android from the one code base and stumbled across [NME](http://haxenme.org/).
 
