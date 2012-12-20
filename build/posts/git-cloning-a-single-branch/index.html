@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta chartset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Scott Mebberson">
+  <title>scottmebberson.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css?v=2" type="text/css" media="screen">
+  <script src="http://use.typekit.com/brk1hsz.js"></script>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33401748-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script src="http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js"></script>
+  <script>
+    var fyre = LF({
+     site_id: 307073,
+     article_id: 'git-cloning-a-single-branch'
+    });
+    
+  </script>
+</head>
+<body>
+  <header>
+    <h1>scottmebberson.com</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/examples/">Examples</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <article>
+      <header>
+        <h1>Cloning a single branch in git</h1>
+      </header><p>If you have <code>git</code> 1.7.10 or greater, you can actually clone a single branch using <code>git</code>. The following effectively clones a repository and then switches to a specific branch:
+
+</p>
+<pre><code>git <span class="keyword">clone</span> git@github.com:repo/ongithub.git -b branch-name /path/to/repo</code></pre>
+<p>If you add the switch <code>--single-branch</code>, you&apos;ll only get that specific branch:
+
+</p>
+<pre><code>git <span class="keyword">clone</span> --single-branch git@github.com:repco/ongithub.git -b design /path/to/repo</code></pre>
+
+      <div id="social">
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
+      </div>
+      <div id="livefyre"></div>
+    </article>
+  </div>
+  <footer></footer>
+</body></html>
