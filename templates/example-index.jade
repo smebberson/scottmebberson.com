@@ -2,8 +2,6 @@ extends layout
 
 block content-body
 	section
-		header
-			h1 Examples
 		!= page.html
 
 		- var examples = _.chain(contents.examples._.directories).map(function (item) {

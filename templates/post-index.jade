@@ -1,6 +1,9 @@
 extends layout
 
 block content-body
+
+	section
+
 		!= page.html
 
 		- var posts = _.chain(contents.posts._.directories).map(function (item) {
