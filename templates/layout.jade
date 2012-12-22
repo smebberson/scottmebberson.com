@@ -31,15 +31,16 @@ head
 body
 	block content-header
 		header
-			h1= locals.title
-			nav
-				ul
-					li
-						a(href='/') Home
-					li
-						a(href='/posts/') Posts
-					li
-						a(href='/examples/') Examples
+			div.row
+				h1= locals.title
+				nav
+					ul
+						li
+							a(href='/') Home
+						li
+							a(href='/posts/') Posts
+						li
+							a(href='/examples/') Examples
 	div.page
 
 		block page-header

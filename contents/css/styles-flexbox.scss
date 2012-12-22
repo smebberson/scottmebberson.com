@@ -39,43 +39,21 @@ $default-padding: 2em;
 	
 	body {
 
-		color: red;
+		& > header div.row {
 
-		& > header {
-
-			display: block;
-			margin: 0 0 30px 0;
-			text-align: center;
-			background: $color-header;
-			color: #333;
-			overflow: hidden;
+			@include display-box;
+			@include box-orient(horizontal);
 
 			h1 {
 				font-size: 28px;
 				color: #FFF;
 				margin: 0;
+				@include box-flex(2);
 			}
 
-			nav {
-
-				margin: 0;
-				display: -webkit-box;
-				-webkit-box-pack: center;
-
-				ul {
-
-					margin: 0 auto;
-
-					li {
-						text-align: center;
-					}
-				}
-			}
 		}
 
 		div.content {
-
-			width: 90%;
 
 			article, section {
 
