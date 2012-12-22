@@ -1,10 +1,11 @@
 $primary-color: #60F;
+$inverse-color: #FFF;
 
 $content-margin-external: 60px;
 $content-margin-internal: 40px;
 $color-header: #333;
 $color-headings: #333;
-$inverse-color: #FFF;
+
 $font: 'Open Sans', sans;
 $font-headings: 'Open Sans', sans;
 
@@ -45,8 +46,6 @@ $default-padding: 2em;
 			@include box-orient(horizontal);
 
 			h1 {
-				font-size: 28px;
-				color: #FFF;
 				margin: 0;
 				@include box-flex(2);
 			}
