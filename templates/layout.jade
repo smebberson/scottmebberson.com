@@ -9,7 +9,8 @@ head
 	title= locals.title
 
 	meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-	link(href='http://fonts.googleapis.com/css?family=Snippet', rel='stylesheet', type='text/css');
+	link(href='http://fonts.googleapis.com/css?family=Snippet', rel='stylesheet', type='text/css')
+	link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
 	link(rel='stylesheet', href='/css/styles-flexbox.css?v=2', type='text/css', media='screen')
 
 	script(src='http://use.typekit.com/brk1hsz.js')
@@ -39,8 +40,17 @@ body
 						a(href='/posts/') Posts
 					li
 						a(href='/examples/') Examples
-	div.content
-		block content-body
+	div.page
+
+		block page-header
+			header
+				div.row
+					h1= page.title
+					if page.metadata.subtitle
+						h2= page.metadata.subtitle
+
+		div.content
+			block content-body
 
 	block content-footer
 		footer

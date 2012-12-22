@@ -1,9 +1,8 @@
 extends layout
 
 block content-body
+
 	section
-		header
-			h1 Recent updates
 
 		- var objs = _.chain(_.union(contents.posts._.directories,contents.kb._.directories,contents.examples._.directories)).map(function (item) {
 		- return item.index

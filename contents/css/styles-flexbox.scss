@@ -1,10 +1,25 @@
+$primary-color: #60F;
+
 $content-margin-external: 60px;
 $content-margin-internal: 40px;
-$color-header: #6600ff;
+$color-header: #333;
 $color-headings: #333;
-$font: 'nimbus-sans', sans;
-$font-headings: 'museo-sans', sans-serif;
+$inverse-color: #FFF;
+$font: 'Open Sans', sans;
+$font-headings: 'Open Sans', sans;
 
+$break-point: 720px;
+$default-padding: 2em;
+
+@mixin row {
+
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+
+}
+
+@import 'bourbon/bourbon';
 @import 'reset.css';
 @import 'base';
 @import 'layout';
@@ -20,9 +35,11 @@ $font-headings: 'museo-sans', sans-serif;
 		margin: 40px 20px 0 20px;
 	}
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: $break-point) {
 	
 	body {
+
+		color: red;
 
 		& > header {
 
@@ -86,11 +103,11 @@ $font-headings: 'museo-sans', sans-serif;
 					header {
 
 						h1 {
-							float: none;
+							float: left;
 						}
 
 						time {
-							float: none;
+							float: right;
 						}
 
 					}
