@@ -7,8 +7,8 @@
   <title>scottmebberson.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/styles-flexbox.css?v=2" type="text/css" media="screen">
-  <script src="http://use.typekit.com/brk1hsz.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css?v=3" type="text/css" media="screen">
   <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   <script>
@@ -32,20 +32,25 @@
 </head>
 <body>
   <header>
-    <h1>scottmebberson.com</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/posts/">Posts</a></li>
-        <li><a href="/examples/">Examples</a></li>
-      </ul>
-    </nav>
+    <div class="row">
+      <h1>scottmebberson.com</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/examples/">Examples</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <div class="content">
-    <article>
-      <header>
+  <div class="page">
+    <header>
+      <div class="row">
         <h1>Cloning a single branch in git</h1>
-      </header><p>If you have <code>git</code> 1.7.10 or greater, you can actually clone a single branch using <code>git</code>. The following effectively clones a repository and then switches to a specific branch:
+      </div>
+    </header>
+    <div class="content">
+      <article><p>If you have <code>git</code> 1.7.10 or greater, you can actually clone a single branch using <code>git</code>. The following effectively clones a repository and then switches to a specific branch:
 
 </p>
 <pre><code>git <span class="keyword">clone</span> git@github.com:repo/ongithub.git -b branch-name /path/to/repo</code></pre>
@@ -54,13 +59,14 @@
 </p>
 <pre><code>git <span class="keyword">clone</span> --single-branch git@github.com:repco/ongithub.git -b design /path/to/repo</code></pre>
 
-      <div id="social">
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
-        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
-      </div>
-      <div id="livefyre"></div>
-    </article>
+        <div id="social">
+          <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
+        </div>
+        <div id="livefyre"></div>
+      </article>
+    </div>
   </div>
   <footer></footer>
 </body></html>

@@ -7,8 +7,8 @@
   <title>scottmebberson.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/styles-flexbox.css?v=2" type="text/css" media="screen">
-  <script src="http://use.typekit.com/brk1hsz.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css?v=3" type="text/css" media="screen">
   <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   <script>
@@ -32,20 +32,25 @@
 </head>
 <body>
   <header>
-    <h1>scottmebberson.com</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/posts/">Posts</a></li>
-        <li><a href="/examples/">Examples</a></li>
-      </ul>
-    </nav>
+    <div class="row">
+      <h1>scottmebberson.com</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/examples/">Examples</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <div class="content">
-    <article>
-      <header>
+  <div class="page">
+    <header>
+      <div class="row">
         <h1>My first attempt at Haxe</h1>
-      </header><p>I&apos;ve been aware of <a href="http://haxe.org/">Haxe</a> for some time. Up until now, I&apos;ve mostly wanted to target Flash so I just didn&apos;t bother with it. Recently, I&apos;ve been looking into ways to target iOS and Android from the one code base and stumbled across <a href="http://haxenme.org/">NME</a>.
+      </div>
+    </header>
+    <div class="content">
+      <article><p>I&apos;ve been aware of <a href="http://haxe.org/">Haxe</a> for some time. Up until now, I&apos;ve mostly wanted to target Flash so I just didn&apos;t bother with it. Recently, I&apos;ve been looking into ways to target iOS and Android from the one code base and stumbled across <a href="http://haxenme.org/">NME</a>.
 
 </p>
 <p>NME is a framework built on top of Haxe. It enables you to target Flash, iOS, Android, JavaScript and even HTML5; all from the one source. Sounds too good to be true, so I decided to give it shot.
@@ -72,13 +77,14 @@ nme test project.nmml ios -simulator</code></pre>
 
 <div id="haxe:jeash" style="background-color: #ffffff; height: 280px; overflow: hidden; position: relative !important;" data-framerate="30"></div>
 <script type="text/javascript" src="./js/Squares.js"></script>
-      <div id="social">
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
-        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
-      </div>
-      <div id="livefyre"></div>
-    </article>
+        <div id="social">
+          <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43"></script>
+        </div>
+        <div id="livefyre"></div>
+      </article>
+    </div>
   </div>
   <footer></footer>
 </body></html>

@@ -1,8 +1,8 @@
 @import url(reset.css);
 body {
-  background: url(http://subtlepatterns.com/patterns/bright_squares.png);
+  background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/dust.png");
   font-size: 1em;
-  font-family: "nimbus-sans", sans;
+  font-family: "Open Sans", sans;
   font-weight: 200;
   font-style: normal;
   line-height: 150%;
@@ -31,116 +31,129 @@ pre {
   border: 1px solid #CCC;
   padding: 8px 10px;
   border-radius: 3px;
-  margin: 10px 0; }
+  margin: 10px 0;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
 
 code {
   font-size: 12px;
   font-family: Consolas, Menlo, Courier, monospace; }
 
 body > header {
-  margin: 15px 0 42px 0;
-  padding: 8px 20px 8px 20px;
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  background: #6600ff;
-  color: #FFF;
-  -webkit-box-shadow: 0px 0px 16px #AAA;
-  overflow: hidden; }
-  body > header h1 {
-    font-size: 36px;
-    margin: 5px 0 5px 0;
-    font-family: 'Snippet', sans-serif;
-    -webkit-box-flex: 1; }
-  body > header nav {
-    margin: 10px 0 0 0;
-    font-family: "museo-sans", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 100%; }
-    body > header nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      body > header nav ul li {
-        float: left;
-        margin-right: 4px;
-        content: '|'; }
-        body > header nav ul li a {
-          color: #FFFFFF;
-          text-decoration: none;
-          padding: 2px 6px;
-          -webkit-border-radius: 5px;
-          -webkit-transition: all .2s; }
-          body > header nav ul li a:hover {
-            background: #2E0D7F; }
+  margin: 0;
+  padding: 1em 1.33em 1em 1.33em;
+  background: #333333;
+  color: #333; }
+  body > header div.row {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto; }
+    body > header div.row h1 {
+      font-size: 1.4em;
+      color: white;
+      margin: 0; }
+    body > header div.row nav {
+      margin: .2em 0 0; }
+      body > header div.row nav ul {
+        margin: 0 auto;
+        margin-left: -6px; }
+        body > header div.row nav ul li {
+          display: inline-table;
+          margin-right: .6em;
+          font-size: 85%; }
+          body > header div.row nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 2px 6px;
+            -webkit-border-radius: 5px;
+            -webkit-transition: all .2s; }
+            body > header div.row nav ul li a:hover {
+              background: #6600ff; }
 
-div.content {
-  display: -webkit-box;
+div.page > header {
+  background: #60F;
+  padding: 2em 1em;
+  margin-bottom: 1.33em; }
+  div.page > header > div.row {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1em; }
+    div.page > header > div.row h1 {
+      font-size: 200%;
+      line-height: 95%;
+      font-weight: 200;
+      font-family: "Open Sans", sans;
+      letter-spacing: -0.03em;
+      color: white;
+      margin-bottom: .2em; }
+    div.page > header > div.row h2 {
+      color: white; }
+div.page div.content {
+  /* display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -webkit-box-pack: center;
-  width: 70%;
+  -webkit-box-pack: center; */
   margin: 0 auto;
-  margin-bottom: 40px; }
-  div.content h2, div.content h3, div.content h4, div.content h5, div.content h6 {
-    font-family: "museo-sans", sans-serif;
-    font-weight: 700;
+  margin-bottom: 40px;
+  padding: 0 1.33em; }
+  div.page div.content h2, div.page div.content h3, div.page div.content h4, div.page div.content h5, div.page div.content h6 {
+    font-family: "Open Sans", sans;
+    font-weight: 600;
+    line-height: 110%;
     color: #333333; }
-  div.content h2 {
-    font-size: 36px; }
-  div.content h3 {
+  div.page div.content h2 {
+    font-weight: 600;
+    font-size: 200%; }
+  div.page div.content h3 {
     font-size: 32px; }
-  div.content ul {
+  div.page div.content ul {
     margin: 10px; }
-    div.content ul li {
+    div.page div.content ul li {
       list-style: disc;
       margin: 0 0 0 16px; }
-  div.content article, div.content section {
-    -webkit-box-flex: 1; }
-    div.content article header h1, div.content section header h1 {
-      font-size: 42px;
-      font-weight: 700;
-      font-family: "museo-sans", sans-serif;
-      letter-spacing: -0.03em;
-      color: #333333;
-      margin: 0 0 .7em 0; }
-    div.content article section h1, div.content section section h1 {
+  div.page div.content article, div.page div.content section {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto; }
+    div.page div.content article section h1, div.page div.content section section h1 {
       font-size: 36px;
       font-weight: 700;
-      font-family: "museo-sans", sans-serif;
+      font-family: "Open Sans", sans;
       color: #333333; }
-    div.content article h2, div.content article h3, div.content article h4, div.content article h5, div.content section h2, div.content section h3, div.content section h4, div.content section h5 {
+    div.page div.content article h2, div.page div.content article h3, div.page div.content article h4, div.page div.content article h5, div.page div.content section h2, div.page div.content section h3, div.page div.content section h4, div.page div.content section h5 {
       margin: .75em 0 .5em 0;
       letter-spacing: -0.03em; }
-    div.content article div#social, div.content section div#social {
+    div.page div.content article div#social, div.page div.content section div#social {
       margin: 30px 0 20px 0;
       padding: 10px;
       background: rgba(100, 100, 100, 0.2);
       -webkit-border-radius: 6px; }
-    div.content article div#livefyre, div.content section div#livefyre {
+    div.page div.content article div#livefyre, div.page div.content section div#livefyre {
       margin: 0 !important; }
-    div.content article article.teaser, div.content section article.teaser {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #CCC; }
-      div.content article article.teaser:first-of-type, div.content section article.teaser:first-of-type {
-        border-top: 1px solid #CCC;
-        padding-top: 20px; }
-      div.content article article.teaser header, div.content section article.teaser header {
+    div.page div.content article article.teaser, div.page div.content section article.teaser {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 1em 0;
+      padding: 0.5em 0.665em; }
+      div.page div.content article article.teaser:nth-child(odd), div.page div.content section article.teaser:nth-child(odd) {
+        background-color: rgba(102, 0, 255, 0.05); }
+      div.page div.content article article.teaser header, div.page div.content section article.teaser header {
         overflow: hidden; }
-        div.content article article.teaser header h1, div.content section article.teaser header h1 {
-          font-size: 24px;
-          margin: 0;
-          float: left; }
-        div.content article article.teaser header time, div.content section article.teaser header time {
-          float: right;
-          font-weight: bold; }
-      div.content article article.teaser p, div.content section article.teaser p {
+        div.page div.content article article.teaser header h1, div.page div.content section article.teaser header h1 {
+          font-size: 1.4em;
+          font-weight: 600;
+          letter-spacing: -0.06em;
+          margin: 0; }
+        div.page div.content article article.teaser header time, div.page div.content section article.teaser header time {
+          font-size: 90%;
+          font-weight: 600; }
+      div.page div.content article article.teaser p, div.page div.content section article.teaser p {
         clear: left;
-        width: 70%;
         line-height: 130%;
         margin: 10px 0 0 0; }
-  div.content aside.left {
+  div.page div.content aside.left {
     margin: 0 3% 0 -5%;
     /* give the whole article a more balanced look, when we actually have an aside */
     font-size: 0.85em; }
@@ -152,42 +165,35 @@ div.content {
 footer {
   margin: 40px 20px 0 20px; }
 
-@media screen and (max-width: 720px) {
-  body > header {
-    display: block;
-    margin: 0 0 30px 0;
-    text-align: center;
-    background: #6600ff;
-    color: #333;
-    overflow: hidden; }
-    body > header h1 {
-      font-size: 28px;
-      color: #FFF;
-      margin: 0; }
-    body > header nav {
+@media screen and (min-width: 720px) {
+  body > header div.row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal; }
+    body > header div.row h1 {
       margin: 0;
-      display: -webkit-box;
-      -webkit-box-pack: center; }
-      body > header nav ul {
-        margin: 0 auto; }
-        body > header nav ul li {
-          text-align: center; }
-  body div.content {
-    width: 90%; }
-    body div.content article header h1, body div.content section header h1 {
-      font-size: 30px;
-      margin: 0 0 14px 0; }
-    body div.content article header h2, body div.content section header h2 {
-      font-size: 20px; }
-    body div.content article section h1, body div.content section section h1 {
-      line-height: 38px; }
-    body div.content article article.teaser header h1, body div.content section article.teaser header h1 {
-      float: none; }
-    body div.content article article.teaser header time, body div.content section article.teaser header time {
-      float: none; }
-    body div.content article article.teaser p, body div.content section article.teaser p {
-      width: auto; }
-    body div.content aside.left {
-      display: none; }
+      -webkit-box-flex: 2;
+      -moz-box-flex: 2;
+      box-flex: 2; }
+  body div.page header div.row h1 {
+    font-size: 266%; }
+  body div.content article header h1, body div.content section header h1 {
+    font-size: 30px;
+    margin: 0 0 14px 0; }
+  body div.content article header h2, body div.content section header h2 {
+    font-size: 20px; }
+  body div.content article section h1, body div.content section section h1 {
+    line-height: 38px; }
+  body div.content article article.teaser header h1, body div.content section article.teaser header h1 {
+    float: left; }
+  body div.content article article.teaser header time, body div.content section article.teaser header time {
+    float: right; }
+  body div.content article article.teaser p, body div.content section article.teaser p {
+    width: auto; }
+  body div.content aside.left {
+    display: none; }
   body footer {
     margin: 0 20px 0 20px; } }
