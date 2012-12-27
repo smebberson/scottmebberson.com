@@ -1,5 +1,5 @@
 ---
 title: Recent updates
-subtitle: Posts, examples, etc
+subtitle: A list of recent updates to my website.
 template: homepage.jade
 ---

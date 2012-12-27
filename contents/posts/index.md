@@ -1,5 +1,5 @@
 ---
 title: Posts
-subtitle: These are specifically blog style posts.
+subtitle: General posts, blog style.
 template: post-index.jade
 ---
