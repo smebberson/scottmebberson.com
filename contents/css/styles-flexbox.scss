@@ -10,13 +10,21 @@ $font: 'Open Sans', sans;
 $font-headings: 'Open Sans', sans;
 
 $break-point: 720px;
-$default-padding: 2em;
+$default-padding-x: 1em;
+$default-padding-y: $default-padding-x*1.33;
 
 @mixin row {
 
 	width: 1000px;
 	max-width: 100%;
 	margin: 0 auto;
+
+}
+
+@mixin pre-text-wrap {
+	
+	white-space: pre-wrap;
+	word-wrap: break-word;
 
 }
 
@@ -49,6 +57,12 @@ $default-padding: 2em;
 				margin: 0;
 				@include box-flex(2);
 			}
+
+		}
+
+		div.page header div.row h1 {
+
+			font-size: 266%;
 
 		}
 
