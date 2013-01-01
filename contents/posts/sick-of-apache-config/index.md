@@ -7,7 +7,7 @@ status: published
 template: post.jade
 ---
 
-For work, I do a lot of prototyping and exploration. I run an Apache setup on my Mac for local development and as a result, my Apache config is full of vhosts that I'll probably never use again. I'm moving on.
+I do a lot of prototyping and exploration [at work][tma]. I run an Apache setup on my Mac for local development and as a result, my Apache config is full of vhosts that I'll probably never use again. I'm moving on.
 
 I've decided to use node.js to instantly create a static web server when prototyping code and wanting to preview it in the browser. There are dozens of modules out there to create static web servers, but I wanted to show you the [node-static][staticnpm] module. [You can use easily use it within your own node.js projects][staticboilerplate], but it also has a really useful command line interface.
 
@@ -39,7 +39,9 @@ static public
 
 ```node-static``` will start serving the contents of the ```public``` directory, via HTTP at http://localhost:8080/.
 
-A very handy utility!
+A very handy utility! [node-static has other neat command line capabilities][nodestaticcli] which you should read about.
 
 [staticboilerplate]: http://scottmebberson.com/examples/quick-static-webserver-in-node/
 [staticnpm]: https://npmjs.org/package/node-static
+[nodestaticcli]: https://github.com/cloudhead/node-static#command-line-interface
+[tma]: http://www.thememphisagency.com/
