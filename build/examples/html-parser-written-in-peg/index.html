@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <meta chartset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Scott Mebberson">
+  <title>scottmebberson.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Snippet" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/styles-flexbox.css?v=4" type="text/css" media="screen">
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33401748-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="row">
+      <h1>scottmebberson.com</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/examples/">Examples</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="page">
+    <header>
+      <div class="row">
+        <h1>HTML parser written in PEG.</h1>
+      </div>
+    </header>
+    <div class="content">
+      <article><p>I&apos;ve been introducing myself and experimenting with the concept of creating my own programming language. Not a real one of course, but something more like CoffeeScript or SASS which compiles down to another language.
+
+</p>
+<p>Rather than using <a href="http://zaach.github.com/jison/">Jison</a> (which <a href="http://coffeescript.org/">CoffeeScript</a> was built using) I&apos;ve decided to settle for something called <a href="http://canopy.jcoglan.com/">Canopy</a>. <a href="http://canopy.jcoglan.com/">Canopy</a> is a JavaScript <a href="http://en.wikipedia.org/wiki/Parsing_expression_grammar">PEG</a> parser compiler and differs from <a href="http://zaach.github.com/jison/">Jison</a> in that it doesn&apos;t actually handle the processing of a resulting tree, it just spits out the tree. I really like the concept of separating the expressions from the types.
+
+</p>
+<p>I threw together a quick example to demonstrate how to write a nested expression using PEG. I settled on a really basic HTML parser, <a href="https://github.com/smebberson/peg-html-parser">which you can check out on GitHub</a>. I&apos;ve only taken it as far as the tree, I haven&apos;t written any JavaScript to manipulate the resulting tree as yet.
+
+</p>
+<p>Here is the PEG grammar, which Canopy takes and turns into a JavaScript file which you can run in Node (or Rhino) or the browser.
+
+</p>
+<pre><code>grammar HTML
+    document          &lt;-   (doctype / text / tag)*
+    tag               &lt;-   open_tag (text / tag)* close_tag
+    open_tag          &lt;-   "&lt;" [0-9a-zA-Z \"'=-]+ ">"
+    close_tag         &lt;-   "&lt;/" [0-9a-zA-Z]+ ">"
+    doctype           &lt;-   "&lt;!DOCTYPE " [0-9a-zA-Z]+ ">"
+    text              &lt;-   [^&lt;]+</code></pre>
+
+      </article>
+    </div>
+  </div>
+  <footer></footer>
+</body></html>
