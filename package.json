@@ -1,0 +1,15 @@
+{
+  "name": "scottmebberson.com",
+  "version": "0.1.0",
+  "description": "scottmebberson.com website",
+  "scripts": {
+    "preview": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smebberson/scottmebberson.com.git"
+  },
+  "author": "Scott Mebberson",
+  "readmeFilename": "readme.md",
+  "private": true
+}
