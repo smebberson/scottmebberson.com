@@ -2,8 +2,13 @@
   "name": "scottmebberson.com",
   "version": "0.1.0",
   "description": "scottmebberson.com website",
+  "dependencies": {
+    "express": "3.2.x",
+    "jade": "0.x",
+    "wintersmith": "2.x"
+  },
   "scripts": {
-    "preview": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
+    "preview": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' ../build"
   },
   "repository": {
     "type": "git",
