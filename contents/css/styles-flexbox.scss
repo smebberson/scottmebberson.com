@@ -1,0 +1,126 @@
+$primary-color: #60F;
+$inverse-color: #FFF;
+
+$content-margin-external: 60px;
+$content-margin-internal: 40px;
+$color-header: #333;
+$color-headings: #333;
+
+$font: 'Open Sans', sans;
+$font-headings: 'Open Sans', sans;
+
+$break-point: 720px;
+$default-padding-x: 1em;
+$default-padding-y: $default-padding-x*1.33;
+
+@mixin row {
+
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+
+}
+
+@mixin pre-text-wrap {
+	
+	white-space: pre-wrap;
+	word-wrap: break-word;
+
+}
+
+@import 'bourbon/bourbon';
+@import 'reset.css';
+@import 'base';
+@import 'layout';
+@import 'module';
+@import 'state';
+
+	.gist .gist-file .gist-data pre {
+		font-size: .9em;
+		line-height: 130%;
+	}
+
+	footer {
+		margin: 40px 20px 0 20px;
+	}
+
+@media screen and (min-width: $break-point) {
+	
+	body {
+
+		& > header div.row {
+
+			@include display-box;
+			@include box-orient(horizontal);
+
+			h1 {
+				margin: 0;
+				@include box-flex(2);
+			}
+
+		}
+
+		div.page header div.row h1 {
+
+			font-size: 266%;
+
+		}
+
+		div.content {
+
+			article, section {
+
+				header {
+
+					h1 {
+						font-size: 30px;
+						margin: 0 0 14px 0;
+					}
+
+					h2 {
+						font-size: 20px;
+					}
+
+				}
+
+				section {
+					h1 {
+						line-height: 38px;
+					}
+				}
+
+				article.teaser {
+
+					header {
+
+						h1 {
+							float: left;
+						}
+
+						time {
+							float: right;
+						}
+
+					}
+
+					p {
+						width: auto;
+					}
+
+				}
+
+			}
+
+			aside.left {
+				display: none;
+			}
+
+		}
+
+		footer {
+			margin: 0 20px 0 20px;
+		}
+
+	}
+
+}

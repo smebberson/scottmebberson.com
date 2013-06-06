@@ -1,0 +1,51 @@
+
+body {
+	background: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/dust.png');
+	font-size: 1em;
+	font-family: $font;
+	font-weight: 200;
+	font-style: normal;
+	line-height: 150%;
+	width: 100%;
+}
+
+img {
+	border: 0;
+}
+
+p {
+	margin-bottom: 18px;
+}
+
+a {
+	
+	color: #6600FF;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+pre {
+	color: #333;
+	background-color: rgba(200,200,200,.4);
+	border: 1px solid #CCC;
+	padding: 8px 10px;
+	border-radius: 3px;
+	margin: 0 0 32px;
+	@include pre-text-wrap;
+}
+
+code {
+	font-size: 12px;
+	font-family: Consolas, Menlo, Courier, monospace;
+}

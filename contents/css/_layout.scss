@@ -1,0 +1,203 @@
+
+body > header {
+
+	margin: 0;
+	padding: $default-padding-x $default-padding-y $default-padding-x $default-padding-y;
+	background: $color-header;
+	color: #333;
+
+	div.row {
+
+		@include row;
+
+		h1 {
+			font-size: 1.4em;
+			color: $inverse-color;
+			margin: 0;
+		}
+
+		nav {
+
+			margin: .2em 0 0;
+
+			ul {
+
+				margin: 0 auto;
+				margin-left: -6px;
+
+				li {
+
+					display: inline-table;
+					margin-right: .6em;
+					font-size: 85%;
+
+					a {
+
+						color: #FFFFFF;
+						text-decoration: none;
+						padding: 2px 6px;
+						-webkit-border-radius: 5px;
+						-webkit-transition: all .2s;
+
+						&:hover {
+							background: $primary-color;
+						}
+
+					}
+
+				}
+			}
+		}
+
+	}
+
+}
+
+div.page {
+
+	& > header {
+
+		background: #60F;
+		padding: 2em $default-padding-x;
+		margin-bottom: $default-padding-y;
+
+		& > div.row {
+
+			@include row;
+			margin-bottom: 1em;
+
+			h1 {
+				font-size: 200%;
+				line-height: 95%;
+				font-weight: 200;
+				font-family: $font-headings;
+				letter-spacing: -.03em;
+				color: $inverse-color;
+				margin-bottom: .2em;
+			}
+
+			h2 {
+				color: $inverse-color;
+			}
+
+		}
+
+	}
+
+	div.content {
+
+		/* display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-webkit-box-pack: center; */
+		margin: 0 auto;
+		margin-bottom: 40px;
+		padding: 0 $default-padding-y;
+
+		h2, h3, h4, h5, h6 {
+			font-family: $font-headings;
+			font-weight: 600;
+			line-height: 110%;
+			color: $color-headings;
+		}
+
+		h2 {
+			font-weight: 600;
+			font-size: 200%;
+		}
+
+		h3 {
+			font-size: 32px;
+		}
+
+		ul {
+
+			margin: 10px;
+
+			li {
+				list-style: disc;
+				margin: 0 0 0 16px;
+			}
+
+		}
+
+		article, section {
+
+			@include row;
+
+			section {
+
+				h1 {
+
+					font-size: 36px;
+					font-weight: 700;
+					font-family: $font-headings;
+					color: $color-headings;
+
+				}
+
+			}
+
+			h2, h3, h4, h5 {
+				margin: .75em 0 .5em 0;
+				letter-spacing: -.03em;
+			}
+
+			div#social {
+				margin: 30px 0 20px 0;
+				padding: 10px;
+				background: rgba(100,100,100,.2);
+				-webkit-border-radius: 6px;
+			}
+
+			div#livefyre {
+				margin: 0 !important;
+			}
+
+			article.teaser {
+
+				@include box-sizing(border-box);
+
+				margin: 1em 0;
+				padding: $default-padding-x/2 $default-padding-y/2;
+
+				&:nth-child(odd) {
+					background-color: rgba($primary-color, .05);
+				}
+
+				header {
+
+					overflow: hidden;
+
+					h1 {
+						font-size: 1.4em;
+						font-weight: 600;
+						letter-spacing: -.06em;
+						margin: 0;
+					}
+
+					time {
+						font-size: 90%;
+						font-weight: 600;
+					}
+
+				}
+
+				p {
+					clear: left;
+					line-height: 130%;
+					margin: 10px 0 0 0;
+				}
+
+			}
+
+		}
+
+		aside.left {
+			margin: 0 3% 0 -5%; /* give the whole article a more balanced look, when we actually have an aside */
+			font-size: 0.85em;
+		}
+
+	}
+
+}
