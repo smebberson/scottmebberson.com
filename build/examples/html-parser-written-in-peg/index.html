@@ -42,25 +42,17 @@
       </div>
     </header>
     <div class="content">
-      <article><p>I&apos;ve been introducing myself and experimenting with the concept of creating my own programming language. Not a real one of course, but something more like CoffeeScript or SASS which compiles down to another language.
-
-</p>
-<p>Rather than using <a href="http://zaach.github.com/jison/">Jison</a> (which <a href="http://coffeescript.org/">CoffeeScript</a> was built using) I&apos;ve decided to settle for something called <a href="http://canopy.jcoglan.com/">Canopy</a>. <a href="http://canopy.jcoglan.com/">Canopy</a> is a JavaScript <a href="http://en.wikipedia.org/wiki/Parsing_expression_grammar">PEG</a> parser compiler and differs from <a href="http://zaach.github.com/jison/">Jison</a> in that it doesn&apos;t actually handle the processing of a resulting tree, it just spits out the tree. I really like the concept of separating the expressions from the types.
-
-</p>
-<p>I threw together a quick example to demonstrate how to write a nested expression using PEG. I settled on a really basic HTML parser, <a href="https://github.com/smebberson/peg-html-parser">which you can check out on GitHub</a>. I&apos;ve only taken it as far as the tree, I haven&apos;t written any JavaScript to manipulate the resulting tree as yet.
-
-</p>
-<p>Here is the PEG grammar, which Canopy takes and turns into a JavaScript file which you can run in Node (or Rhino) or the browser.
-
-</p>
+      <article><p>I&#39;ve been introducing myself and experimenting with the concept of creating my own programming language. Not a real one of course, but something more like CoffeeScript or SASS which compiles down to another language.</p>
+<p>Rather than using <a href="http://zaach.github.com/jison/">Jison</a> (which <a href="http://coffeescript.org/">CoffeeScript</a> was built using) I&#39;ve decided to settle for something called <a href="http://canopy.jcoglan.com/">Canopy</a>. <a href="http://canopy.jcoglan.com/">Canopy</a> is a JavaScript <a href="http://en.wikipedia.org/wiki/Parsing_expression_grammar">PEG</a> parser compiler and differs from <a href="http://zaach.github.com/jison/">Jison</a> in that it doesn&#39;t actually handle the processing of a resulting tree, it just spits out the tree. I really like the concept of separating the expressions from the types.</p>
+<p>I threw together a quick example to demonstrate how to write a nested expression using PEG. I settled on a really basic HTML parser, <a href="https://github.com/smebberson/peg-html-parser">which you can check out on GitHub</a>. I&#39;ve only taken it as far as the tree, I haven&#39;t written any JavaScript to manipulate the resulting tree as yet.</p>
+<p>Here is the PEG grammar, which Canopy takes and turns into a JavaScript file which you can run in Node (or Rhino) or the browser.</p>
 <pre><code>grammar HTML
-    document          &lt;-   (doctype / text / tag)*
-    tag               &lt;-   open_tag (text / tag)* close_tag
-    open_tag          &lt;-   "&lt;" [0-9a-zA-Z \"'=-]+ ">"
-    close_tag         &lt;-   "&lt;/" [0-9a-zA-Z]+ ">"
-    doctype           &lt;-   "&lt;!DOCTYPE " [0-9a-zA-Z]+ ">"
-    text              &lt;-   [^&lt;]+</code></pre>
+    document          <span class="tag">&lt;<span class="title">-</span>   (<span class="attribute">doctype</span> / <span class="attribute">text</span> / <span class="attribute">tag</span>)*
+    <span class="attribute">tag</span>               &lt;<span class="attribute">-</span>   <span class="attribute">open_tag</span> (<span class="attribute">text</span> / <span class="attribute">tag</span>)* <span class="attribute">close_tag</span>
+    <span class="attribute">open_tag</span>          &lt;<span class="attribute">-</span>   "&lt;" [<span class="attribute">0-9a-zA-Z</span> \"'=<span class="value">-]+</span> "&gt;</span>"
+    close_tag         <span class="tag">&lt;<span class="title">-</span>   "&lt;/" [<span class="attribute">0-9a-zA-Z</span>]+ "&gt;</span>"
+    doctype           <span class="tag">&lt;<span class="title">-</span>   "&lt;!<span class="attribute">DOCTYPE</span> " [<span class="attribute">0-9a-zA-Z</span>]+ "&gt;</span>"
+    text              <span class="tag">&lt;<span class="title">-</span>   [^&lt;]+</code></pre>
 
       </article>
     </div>

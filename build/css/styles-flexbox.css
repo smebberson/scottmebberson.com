@@ -84,7 +84,7 @@ div.page > header {
       line-height: 95%;
       font-weight: 200;
       font-family: "Open Sans", sans;
-      letter-spacing: -0.03em;
+      letter-spacing: -.03em;
       color: white;
       margin-bottom: .2em; }
     div.page > header > div.row h2 {
@@ -123,7 +123,7 @@ div.page div.content {
       color: #333333; }
     div.page div.content article h2, div.page div.content article h3, div.page div.content article h4, div.page div.content article h5, div.page div.content section h2, div.page div.content section h3, div.page div.content section h4, div.page div.content section h5 {
       margin: .75em 0 .5em 0;
-      letter-spacing: -0.03em; }
+      letter-spacing: -.03em; }
     div.page div.content article div#social, div.page div.content section div#social {
       margin: 30px 0 20px 0;
       padding: 10px;
@@ -144,7 +144,7 @@ div.page div.content {
         div.page div.content article article.teaser header h1, div.page div.content section article.teaser header h1 {
           font-size: 1.4em;
           font-weight: 600;
-          letter-spacing: -0.06em;
+          letter-spacing: -.06em;
           margin: 0; }
         div.page div.content article article.teaser header time, div.page div.content section article.teaser header time {
           font-size: 90%;

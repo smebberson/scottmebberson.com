@@ -50,28 +50,20 @@
       </div>
     </header>
     <div class="content">
-      <article><p>I&apos;ve been aware of <a href="http://haxe.org/">Haxe</a> for some time. Up until now, I&apos;ve mostly wanted to target Flash so I just didn&apos;t bother with it. Recently, I&apos;ve been looking into ways to target iOS and Android from the one code base and stumbled across <a href="http://haxenme.org/">NME</a>.
-
-</p>
-<p>NME is a framework built on top of Haxe. It enables you to target Flash, iOS, Android, JavaScript and even HTML5; all from the one source. Sounds too good to be true, so I decided to give it shot.
-
-</p>
-<p>I wrote a quick script that randomly outputs squares on the stage, just something simple.
-
-</p>
+      <article><p>I&#39;ve been aware of <a href="http://haxe.org/">Haxe</a> for some time. Up until now, I&#39;ve mostly wanted to target Flash so I just didn&#39;t bother with it. Recently, I&#39;ve been looking into ways to target iOS and Android from the one code base and stumbled across <a href="http://haxenme.org/">NME</a>.</p>
+<p>NME is a framework built on top of Haxe. It enables you to target Flash, iOS, Android, JavaScript and even HTML5; all from the one source. Sounds too good to be true, so I decided to give it shot.</p>
+<p>I wrote a quick script that randomly outputs squares on the stage, just something simple.</p>
 <h2>The source</h2>
 <script src="https://gist.github.com/3033231.js"> </script>
 
-<p>You should be able to get it to build cleanly with any of the following:
-
-</p>
-<pre><code>nme test project.nmml flash
-nme test project.nmml html5
-nme test project.nmml ios -simulator</code></pre>
+<p>You should be able to get it to build cleanly with any of the following:</p>
+<pre><code><span class="title">nme</span> test project.nmml flash
+<span class="title">nme</span> test project.nmml html5
+<span class="title">nme</span> test project.nmml ios -simulator</code></pre>
 <h2>SWF output</h2>
 <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 <script src="./js/embed.js"></script>
-<div id="haxe:flash" style="background-color: #FFFFFF; height: 280px">iOS devices won&apos;t show this version :)</div>
+<div id="haxe:flash" style="background-color: #FFFFFF; height: 280px">iOS devices won't show this version :)</div>
 
 <h2>HTML5 output</h2>
 

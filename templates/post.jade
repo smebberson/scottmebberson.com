@@ -2,7 +2,7 @@ extends layout
 
 block scripts-header
 	script(src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js')
-	script
+	script.
 		var fyre = LF({
 			site_id: 307073,
 			article_id: '#{page.url.replace(/\/(.*?)\/(.*?)\//g, '$2')}'
