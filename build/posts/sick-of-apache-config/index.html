@@ -10,6 +10,7 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/styles-flexbox.css?v=4" type="text/css" media="screen">
   <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="/js/masonry.min.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   <script>
     var _gaq = _gaq || [];
@@ -51,37 +52,19 @@
       </div>
     </header>
     <div class="content">
-      <article><p>I do a lot of prototyping and exploration <a href="http://www.thememphisagency.com/">at work</a>. I run an Apache setup on my Mac for local development and as a result, my Apache config is full of vhosts that I&apos;ll probably never use again. I&apos;m moving on.
-
-</p>
-<p>I&apos;ve decided to use node.js to instantly create a static web server when prototyping code and wanting to preview it in the browser. There are dozens of modules out there to create static web servers, but I wanted to show you the <a href="https://npmjs.org/package/node-static">node-static</a> module. <a href="http://scottmebberson.com/examples/quick-static-webserver-in-node/">You can use easily use it within your own node.js projects</a>, but it also has a really useful command line interface.
-
-</p>
-<p>To get started with node-static, install it as a global module:
-
-</p>
-<pre><code>npm install node-<span class="keyword">static</span> -g</code></pre>
-<p>To serve the current directory over HTTP:
-
-</p>
+      <article><p>I do a lot of prototyping and exploration <a href="http://www.thememphisagency.com/">at work</a>. I run an Apache setup on my Mac for local development and as a result, my Apache config is full of vhosts that I&#39;ll probably never use again. I&#39;m moving on.</p>
+<p>I&#39;ve decided to use node.js to instantly create a static web server when prototyping code and wanting to preview it in the browser. There are dozens of modules out there to create static web servers, but I wanted to show you the <a href="https://npmjs.org/package/node-static">node-static</a> module. <a href="http://scottmebberson.com/examples/quick-static-webserver-in-node/">You can use easily use it within your own node.js projects</a>, but it also has a really useful command line interface.</p>
+<p>To get started with node-static, install it as a global module:</p>
+<pre><code><span class="title">npm</span> install node-static -g</code></pre>
+<p>To serve the current directory over HTTP:</p>
 <pre><code><span class="keyword">static</span></code></pre>
-<p>That&apos;s it. The current directory will now be available over HTTP (assuming you have nothing else listening on that port), view it in your browser at <a href="http://localhost:8080/">http://localhost:8080/</a>.
-
-</p>
-<p>To change the port, pass the port number via the <code>-p</code> argument:
-
-</p>
-<pre><code><span class="keyword">static</span> -p <span class="number">8001</span></code></pre>
-<p>To serve a directory other than the current directory:
-
-</p>
+<p>That&#39;s it. The current directory will now be available over HTTP (assuming you have nothing else listening on that port), view it in your browser at <a href="http://localhost:8080/">http://localhost:8080/</a>.</p>
+<p>To change the port, pass the port number via the <code>-p</code> argument:</p>
+<pre><code><span class="title">static</span> -p <span class="number">8001</span></code></pre>
+<p>To serve a directory other than the current directory:</p>
 <pre><code><span class="keyword">static</span> <span class="keyword">public</span></code></pre>
-<p><code>node-static</code> will start serving the contents of the <code>public</code> directory, via HTTP at <a href="http://localhost:8080/">http://localhost:8080/</a>.
-
-</p>
-<p>A very handy utility! <a href="https://github.com/cloudhead/node-static#command-line-interface">node-static has other neat command line capabilities</a> which you should read about.
-
-</p>
+<p><code>node-static</code> will start serving the contents of the <code>public</code> directory, via HTTP at <a href="http://localhost:8080/">http://localhost:8080/</a>.</p>
+<p>A very handy utility! <a href="https://github.com/cloudhead/node-static#command-line-interface">node-static has other neat command line capabilities</a> which you should read about.</p>
 
         <div id="social">
           <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>

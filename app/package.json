@@ -5,7 +5,8 @@
   "dependencies": {
     "express": "3.2.x",
     "jade": "0.x",
-    "wintersmith": "2.x"
+    "wintersmith": "2.x",
+    "caching": "0.1.x"
   },
   "scripts": {
     "preview": "static -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' ../build"

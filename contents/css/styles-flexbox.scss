@@ -111,6 +111,32 @@ $default-padding-y: $default-padding-x*1.33;
 
 			}
 
+			section#stream {
+
+				article.lifestreamevent {
+
+					width: 170px;
+					margin: 10px;
+					float: left;
+
+					background: #eee;
+					border: 1px solid #ddd;
+
+					p {
+
+						white-space: pre-line;
+						width: 60px;
+
+					}
+
+					date {
+						font-size: 80%;
+					}
+
+				}
+
+			}
+
 			aside.left {
 				display: none;
 			}

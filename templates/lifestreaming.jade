@@ -3,10 +3,16 @@ extends layout
 block scripts-header
 	script(src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js')
 	script
-		var fyre = LF({
+		/* var fyre = LF({
 			site_id: 307073,
 			article_id: '#{page.url.replace(/\/(.*?)\/(.*?)\//g, '$2')}'
-		});
+		}); */
+	script
+		window.onload = function () {
+			var wall = new Masonry(document.getElementById('stream'), {
+				columnWidth: 200
+			});
+		}
 
 block page-header
 			header
@@ -14,20 +20,7 @@ block page-header
 					h1= page.title
 
 block content-body
-	article
+	section#stream
 
-		!= page.html
-
-		div#social
-			div.addthis_toolbox.addthis_default_style.addthis_32x32_style
-				a.addthis_button_preferred_1
-				a.addthis_button_preferred_2
-				a.addthis_button_preferred_3
-				a.addthis_button_preferred_4
-				a.addthis_button_compact
-				a.addthis_counter.addthis_bubble_style
-			script(type='text/javascript')
-				var addthis_config = {"data_track_addressbar":true};
-			script(type='text/javascript', src='http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffd68eb5205bf43')
-
-		div#livefyre
+		for article in articles
+			include lifestreaming/event

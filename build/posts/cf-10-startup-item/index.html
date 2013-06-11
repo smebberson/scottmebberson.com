@@ -10,6 +10,7 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/styles-flexbox.css?v=4" type="text/css" media="screen">
   <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="/js/masonry.min.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   <script>
     var _gaq = _gaq || [];
@@ -50,29 +51,19 @@
       </div>
     </header>
     <div class="content">
-      <article><p>Just a quick note, because I struggled to find this anywhere else on Google. When I installed ColdFusion 10 (on my Mac, 10.7), I ticked the &apos;start ColdFusion on startup option&apos;. A few computer restarts later, I&apos;ve decided to turn that off (my Mac was taking forever to become useable).
-
-</p>
-<p>It wasn&apos;t easy to find the location of the start up script however, and Google didn&apos;t really give many insights.
-
-</p>
-<p>If you want to stop ColdFusion automatically starting on startup, just remove the folder at <code>/Library/StartupItems/ColdFusion10</code>
-
-</p>
-<p>And if you ever wanted to have ColdFusion automatically start again, you can grab <code>cf-standalone-startup</code> and <code>StartupParameters.plist</code> from <code>/Applications/ColdFusion10/cfusion/bin</code> and put them in a folder in <code>/Library/StartupItems/    </code>.
-
-</p>
-<p>For convience, here are some other commands you can run to control ColdFusion over the command line on Mac OS X.
-
-</p>
+      <article><p>Just a quick note, because I struggled to find this anywhere else on Google. When I installed ColdFusion 10 (on my Mac, 10.7), I ticked the &#39;start ColdFusion on startup option&#39;. A few computer restarts later, I&#39;ve decided to turn that off (my Mac was taking forever to become useable).</p>
+<p>It wasn&#39;t easy to find the location of the start up script however, and Google didn&#39;t really give many insights.</p>
+<p>If you want to stop ColdFusion automatically starting on startup, just remove the folder at <code>/Library/StartupItems/ColdFusion10</code></p>
+<p>And if you ever wanted to have ColdFusion automatically start again, you can grab <code>cf-standalone-startup</code> and <code>StartupParameters.plist</code> from <code>/Applications/ColdFusion10/cfusion/bin</code> and put them in a folder in <code>/Library/StartupItems/</code>.</p>
+<p>For convience, here are some other commands you can run to control ColdFusion over the command line on Mac OS X.</p>
 <h2>View the status of ColdFusion:</h2>
-<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion status</code></pre>
+<pre><code><span class="regexp">/Applications/ColdFusion10/cfusion/bin/</span>coldfusion status</code></pre>
 <h2>Stop ColdFusion:</h2>
-<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion stop</code></pre>
+<pre><code><span class="regexp">/Applications/ColdFusion10/cfusion/bin/</span>coldfusion stop</code></pre>
 <h2>Start ColdFusion:</h2>
-<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion start</code></pre>
+<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion <span class="operator"><span class="keyword">start</span></code></pre>
 <h2>Restart ColdFusion:</h2>
-<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion restart</code></pre>
+<pre><code>/Applications/ColdFusion10/cfusion/bin/coldfusion re<span class="operator"><span class="keyword">start</span></code></pre>
 
         <div id="social">
           <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
